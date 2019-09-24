@@ -1,0 +1,45 @@
+.Login-logo {
+    height: 20vmin;
+    margin-bottom: 30px;
+}
+  
+.Login-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Login-link {
+    color: #09d3ac;
+}
+
+.Login-form {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Login-input {
+    margin: 10px;
+}
+
+.Login-submit {
+    margin-top: 30px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.Login-error {
+    background-color: #B54324;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 20px;
+}

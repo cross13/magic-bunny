@@ -1,0 +1,43 @@
+.Magic-logo {
+    height: 20vmin;
+    margin-bottom: 30px;
+}
+  
+.Magic-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Magic-link {
+    color: #09d3ac;
+}
+
+.Magic-hat {
+    cursor: pointer;
+}
+
+.bunny {
+    height: 2vmin;
+    margin: 5px;
+}
+
+.bunny-house {
+    width: 600px;
+}
+
+.Magic-Logout {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+}
+
+.btn-logout {
+    height: 8vmin;
+    margin: 5px;
+}
