@@ -41,7 +41,7 @@ export class Login extends PureComponent {
                 <div className="Login-header">
                     <img src={logo} className="Login-logo" alt="logo" />
                     {!this.state.loggedIn && <div className="Login-form" >
-                        <h3>Magic App</h3>
+                        <h3 className="Login-Title">Magic App</h3>
                         <input 
                             onChange={(e) => this.setState({username: e.target.value})}
                             type="text" placeholder="Username" className="effect-7 Login-username Login-input" />
