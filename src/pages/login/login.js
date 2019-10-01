@@ -41,14 +41,16 @@ export class Login extends PureComponent {
         return (
             <div className="Login">
                 <div className="Login-header">
-                    <h4>Demo App</h4>
+                    <h4 data-cy="title">Welcome to the magic hat</h4>
                     <img src={logo} className="Login-logo" alt="logo" />
                     {!this.state.loggedIn && <div className="Login-form" >
                         <h3 className="Login-Title">Magic App</h3>
                         <input 
+                            name="username"
                             onChange={(e) => this.setState({username: e.target.value})}
                             type="text" placeholder="Username" className="effect-7 Login-username Login-input" />
                         <input
+                            name="password"
                             onChange={(e) => this.setState({password: e.target.value})}
                             type="password" placeholder="Password" className="effect-7 Login-password Login-input" />
                         <button className="Login-submit"
@@ -56,7 +58,9 @@ export class Login extends PureComponent {
                         {
                             this.state.error && <div className="Login-error">{this.state.error}</div>
                         }
-                    </div> }
+                    </div>
+                    }
+                    {!this.state.loggedIn && <div id="signin"><a href="/register">Register</a></div> }
                     {
                         this.state.loggedIn && <h1>looking for the bunny...</h1>
                     }
