@@ -47,11 +47,13 @@ export class Magic extends PureComponent {
 
         return <div className="bunny-house">
             <h3 data-cy="bunny-house-title">Click para que vuelva al sombrero</h3>
+            <div data-cy="bunny-house">
             {
                 [...Array(bunnyCounter).keys()].map((index) => {
                     return <img onClick={this.backToHat} key={index} className={`bunny bunny-${index}`} src={bunny} alt="bunny-counter"/>;
                 })
             }
+            </div>
         </div>
     }
 
