@@ -25,6 +25,7 @@
 .bunny {
     height: 2vmin;
     margin: 5px;
+    cursor: pointer;
 }
 
 .bunny-house {

@@ -25,13 +25,15 @@ export class Login extends PureComponent {
             password: this.state.password,
         }).then((response) => {
             this.setState({loggedIn: true});
+            console.log(response);
             localStorage.setItem('myUser', JSON.stringify(response.data.token));
-            console.log(this.props);
             setTimeout(() => {
                 this.props.history.push('/magic');
             }, 1000);
         }, () => {
-            this.setState({ error: 'Wrong Crendentials' })
+            setTimeout(() => {
+                this.setState({ error: 'Wrong Crendentials' })
+            }, 1000);
         });
     }
 
@@ -39,6 +41,7 @@ export class Login extends PureComponent {
         return (
             <div className="Login">
                 <div className="Login-header">
+                    <h4>Demo App</h4>
                     <img src={logo} className="Login-logo" alt="logo" />
                     {!this.state.loggedIn && <div className="Login-form" >
                         <h3 className="Login-Title">Magic App</h3>

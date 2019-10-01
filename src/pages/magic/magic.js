@@ -17,6 +17,7 @@ export class Magic extends PureComponent {
         this.renderBunny = this.renderBunny.bind(this);
         this.bunnies = this.bunnies.bind(this);
         this.logout = this.logout.bind(this);
+        this.backToHat = this.backToHat.bind(this);
     }
 
     componentDidMount() {
@@ -37,13 +38,18 @@ export class Magic extends PureComponent {
         </div>
     }
 
+    backToHat() {
+        this.setState({bunnyCounter: this.state.bunnyCounter - 1});
+    }
+
     bunnies() {
         const { bunnyCounter } = this.state;
 
         return <div className="bunny-house">
+            <h3 data-cy="bunny-house-title">Click para que vuelva al sombrero</h3>
             {
                 [...Array(bunnyCounter).keys()].map((index) => {
-                    return <img key={index} className={`bunny bunny-${index}`} src={bunny} alt="bunny-counter"/>;
+                    return <img onClick={this.backToHat} key={index} className={`bunny bunny-${index}`} src={bunny} alt="bunny-counter"/>;
                 })
             }
         </div>
